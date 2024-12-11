@@ -43,7 +43,7 @@ const BasketBlock: FC<IProps> = ({ setIsBasketOpen }) => {
                 <p className={styled.itog}> Итого:</p>
                 <p className={styled.itogsumma}> {talbasket}</p>
                 <div className={styled.btn_modal}> 
-                      <Link to="basket">
+                      <Link to={`/diplomsi/basket/`}>
                           <button className={styled.modal_button} onClick={() => setIsBasketOpen()}>
                               Перейти в корзину
                           </button>

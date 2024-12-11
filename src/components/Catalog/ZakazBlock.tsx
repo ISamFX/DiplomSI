@@ -112,7 +112,7 @@ const ZakazBlock: FC<IProps> = ({ setIsZakazOpen }) => {
                       <p className={styled.error_messag_f4}>{errors.email.message as string}</p>
                     )}
                   <div className={styled.zakaz_btn_modal2}> 
-                     <Link to="basket">
+                     <Link to={`/diplomsi/basket/`}>
                          <button type="submit" className={styled.modal_button}  onClick={handleSubmit(onSubmit)} >
                             Оформить заказ
                         </button>
