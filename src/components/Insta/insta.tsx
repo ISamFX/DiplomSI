@@ -1,11 +1,11 @@
 import styled from "./style.module.scss"
 import InstLogo from "../../img/Instagram_logo.png"
 import { useForm } from "react-hook-form"
-import Rectangle37 from "../../img/Rectangle 37.jpg"
-import Rectangle38 from "../../img/Rectangle 38.jpg"
-import Rectangle39 from "../../img/Rectangle 39.jpg"
-import Rectangle40 from "../../img/Rectangle 40.jpg"
-import Rectangle41 from "../../img/Rectangle 41.jpg"
+import Rectangle37 from "../../img/Rectangle37.jpg"
+import Rectangle38 from "../../img/Rectangle38.jpg"
+import Rectangle39 from "../../img/Rectangle39.jpg"
+import Rectangle40 from "../../img/Rectangle40.jpg"
+import Rectangle41 from "../../img/Rectangle41.jpg"
 
 type InstformData = {
     name: string;

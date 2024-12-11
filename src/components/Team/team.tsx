@@ -1,5 +1,5 @@
 import styled from "./style.module.scss"
-import figure from "../../img/Group 72.svg"
+import figure from "../../img/Group72.svg"
 import { useSelector } from "react-redux"
 import { useEffect } from "react"
 import { teamSelector } from "../../redux/team/teamSelecror"
