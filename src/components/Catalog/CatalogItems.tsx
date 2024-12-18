@@ -31,6 +31,7 @@ const CatalogItems: FC<IProps> = ({ gender }) => {
 //------------------------------------
   return (
     <>
+
       <ul className={styled.product_cat_sneak}>
         {sneakers
           .filter((_, index) => index < limit)

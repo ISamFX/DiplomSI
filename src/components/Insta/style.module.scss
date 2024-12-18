@@ -1,4 +1,4 @@
-@import "../../device.scss";
+@use "../../device.scss";
 
 .inpcontainer{
   position: absolute;
@@ -52,7 +52,7 @@
   top: 5711px;
   width: 340px;
   height: 199.23px; 
-    @include respond-to(custom1195) {
+  @media (min-width: 375px) and (max-width: 1195px) {
       flex-direction: column;
       align-items: center;
     }  
@@ -64,7 +64,7 @@
   display: flex;
   align-items: center;  
   flex-direction: column;
-  row-gap: 10px;
+  row-gap: 20px;
 }
 .input_form_first {
   padding: 20px 140px 20px 20px;
@@ -73,7 +73,7 @@
   border-radius: 4px;
   border: none;
 
-  @include respond-to(mobile) {
+  @media (min-width: 375px) and (max-width: 1024px) {
     padding: 18px 130px 18px 20px;
   }
 }  
@@ -83,7 +83,7 @@
   margin-right: 20px;
   border-radius: 4px;
   border: none;
-@include respond-to(mobile) {
+  @media (min-width: 375px) and (max-width: 1024px) {
   padding: 18px 130px 18px 20px;
 }
 }
@@ -91,7 +91,7 @@
     width: 338;
     height: 60;
     padding: 20px 128px 20px 128px;
-    margin-top: 10px;
+    margin-top: 15px;
     margin-bottom: 62px;
     background: #F14F4F;
     border: none;
@@ -109,11 +109,10 @@
     background-color: #8C2828;
 }  
 .error {
-    color: rgba(255, 242, 0, 0.795);;
-    text-align: start;
-    margin-left: 20px;
-    margin-top: 10px;
-    font-weight: 700;
+    text-align: end;
+    margin-top: -30px;
+  margin-right: 30px;
+  color: #F14F4F;
 }
 
 .inst_logo_image{

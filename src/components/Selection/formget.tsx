@@ -1,8 +1,6 @@
 import styled from "./style.module.scss"
 import { useState } from "react"
 import { useFormContext } from "react-hook-form"
-import message from "../../img/message.png"
-
 
 function FormGet() {
   const [isShow, setShow] = useState(false);
@@ -14,11 +12,11 @@ function FormGet() {
     
     <div className={styled.select_container_f4}>
       <div className={styled.heading_container_f4}> 
-        <h4>Ваша подборка готова!</h4>
+        <h4>Ваша подборка готова! </h4>
       </div> 
       <div className={styled.txt_container_f4}>
         <p >
-            Оставьте свои контактные данные, чтобы бы мы могли отправить  подготовленный для вас каталог
+            Оставьте свои контактные данные, чтобы бы мы могли отправить  подготовленный для вас каталог {isShow}
         </p>
       </div>
       <div className={styled.line_blok_f4}></div>
@@ -59,7 +57,7 @@ function FormGet() {
                 <button type="submit" onClick={() => showSubmit()} className={styled.f4_submit}>
                     Получить
                 </button> 
-                {isShow  && <img src={message} alt="получено" className={styled.f4_img} />}
+                
               </div>
             </div>    
       </div>

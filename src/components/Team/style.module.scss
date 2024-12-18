@@ -1,4 +1,4 @@
-@import "../../device.scss";
+
 
 .container {
     position: absolute;
@@ -56,7 +56,7 @@
     grid-template-areas: 
     ". . ."
     ". . .";  
-     @include respond-to(mobile) {
+    @media (min-width: 375px) and (max-width: 1024px) {
       align-items: center;
      }
 }

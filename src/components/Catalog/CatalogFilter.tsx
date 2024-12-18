@@ -1,7 +1,6 @@
 
 import styled from "./style.module.scss"
 import { FC } from "react";
-
 import PriceFilter from "./PriceFilter";
 import GenderFilter from "./GenderFilter";
 import SizesFilter from "./SizesFilter";
@@ -9,12 +8,12 @@ import { useDispatch } from "react-redux";
 import { SubmitHandler, useForm } from "react-hook-form";
 import { fetchSneak, FilterData } from "../../redux/sneakers/sneakSlice";
 import { AppDispatch } from "../../store";
-import { loadMore, resetData } from "../../redux/sneakers/sneakSlice"
+import { loadMore } from "../../redux/sneakers/sneakSlice"
+
 
 interface IProps {
   setGender: (gender: string) => void;
 }
-
 
 const CatalogFilter: FC<IProps> = ({ setGender }) => {
 
@@ -39,10 +38,9 @@ const CatalogFilter: FC<IProps> = ({ setGender }) => {
         maxPrice: data.maxPrice,
         gender: data.gender,
         sizes: data.sizes,
-      })
+      })      
     );
   };
-  
 
   return (
 
@@ -63,14 +61,25 @@ const CatalogFilter: FC<IProps> = ({ setGender }) => {
                 Применить
             </button>
             <button className={styled.catalog_reset} type="reset"
-                      onClick={() => {reset({
-                        minPrice: 0,
-                        maxPrice: 44999,
-                        gender: "",
-                        sizes: [],}), dispatch(resetData()) }} >
-              Сбросить
-            </button>
-       
+                      onClick={() => { reset ({
+                                        minPrice: 2,
+                                        maxPrice: 59899,
+                                        gender: "",
+                                        sizes: []});
+                                      dispatch(
+                                        fetchSneak({
+                                          minPrice: 3,
+                                          maxPrice: 59799,
+                                          gender: "",
+                                          sizes: []}));
+                                      setValue("minPrice", 2);
+                                      setValue("maxPrice", 59899);
+                                      window.location.reload()  
+                                    }
+                              }           
+              > 
+                Сбросить
+            </button>        
         </div>    
       </div>
     </form>

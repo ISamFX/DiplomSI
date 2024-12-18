@@ -1,17 +1,18 @@
 import styled from "./style.module.scss"
 import { useState } from "react"
-
-// import {ScrollLink} from "react-scroll"
+import { Link } from "react-scroll"
 import HeaderBasket from "../Catalog/HeaderBasket"
-import BasketBlock from "../Catalog/BasketBlock";
-import ZakazBlock from "../Catalog/ZakazBlock";
+import BasketBlock from "../Catalog/BasketBlock"
+import ZakazBlock from "../Catalog/ZakazBlock"
+                            // {/* // <li key={item.id} className={styled.nav_bnt} >
+                            //     <a href={`#${item.id}`}>{item.title}</a>
+                            // </li> */}
 
 
 interface NavItem {
   title: string;
   id: string;
 }
-
 
 const navList: NavItem[] = [
   { title: "Каталог", id: "catalog" },
@@ -37,15 +38,16 @@ const Hero =() =>{
         <div className={styled.hero_container}>
                 <nav>                  
                     <p className={styled.logo}>SneakMax</p>
-                    {/* <ScrollLink to="catalog" spy={true} smooth={true} offset={50} duration={500}> */}
-                        {/* Каталог */}
-                    {/* </ScrollLink> */}
-                    <ul className={styled.nav_list}>
-                        {navList.map((item) => (
-                            <li key={item.id} className={styled.nav_bnt} >
-                                <a href={`#${item.id}`}>{item.title}</a>
+                    
+                    
+                    <ul className={styled.nav_list}> 
+                        {navList.map((item) => ( 
+                            <li className={styled.nav_bnt}>
+                                <Link to={item.id} spy={true} smooth={true} offset={50} duration={1000} className={styled.nav_bnt}>
+                                     {item.title}
+                                </Link> 
                             </li>
-                        ))}                    
+                        ))}    
                     </ul> 
                     <HeaderBasket isOpen={isOpen}
                             setIsOpen={isOpenCallback}

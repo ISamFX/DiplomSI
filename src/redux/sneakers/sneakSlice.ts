@@ -102,8 +102,7 @@ export const sneakSlice = createSlice({
       state.data = [];
       state.currentPage = 1;
       state.totalPages = 0;
-      state.loading = "idle";
-      
+      state.loading = "idle";  
     },
   },
   extraReducers: (builder) => {

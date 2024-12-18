@@ -11,14 +11,13 @@ interface IProps {
 
 const SizesFilter: FC<IProps> = ({ setValue }) => {
   const [selectedSizes, setSelectedSizes] = useState<string[]>([]);
-
   const handleSizeChange = (size: string) => {
-    console.log(selectedSizes);
     setSelectedSizes((prevSelectedSizes) => {
       const newSizes = prevSelectedSizes.includes(size)
         ? prevSelectedSizes.filter((s) => s !== size)
         : [...prevSelectedSizes, size];
       setValue("sizes", newSizes);
+      console.log(newSizes, selectedSizes);
       return newSizes;
     });
   };

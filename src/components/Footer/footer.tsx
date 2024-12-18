@@ -1,4 +1,5 @@
 import styled from "./style.module.scss"
+import { Link } from "react-scroll"
 
 interface NavItem {
   title: string;
@@ -19,11 +20,13 @@ const Footer =() => {
   return (
     <footer className={styled.Footer}>
         <nav> 
-              <p className={styled.footer_logo}>SneakMax</p>                 
-             <ul className={styled.nav_list}>
+             <p className={styled.footer_logo}>SneakMax</p>                 
+              <ul className={styled.nav_list}>
                  {navList.map((item) => (
-                  <li key={item.id} className={styled.nav_bnt} >
-                    <a href={`#${item.id}`}>{item.title}</a>
+                  <li className={styled.nav_bnt}>
+                    <Link to={item.id} spy={true} smooth={true} offset={50} duration={1500} className={styled.nav_bnt}>
+                       {item.title}
+                    </Link> 
                   </li>
                 ))}                    
               </ul> 

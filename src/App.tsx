@@ -8,12 +8,14 @@ import Contacts from "./components/Contacts/contacts"
 import Insta from "./components/Insta/insta"
 import Selection from "./components/Selection/selectform"
 import CatalogS from "./components/Catalog/CatologS"
+import { Toaster} from 'sonner'
 
 
 function App() {
-
-  
+ 
     return ( 
+    <>
+       <Toaster richColors/>
       <div>
         <Hero/>  
         <CatalogS /> 
@@ -24,8 +26,9 @@ function App() {
         <Contacts />
         <Insta />S
         <Footer/>
-      </div>     
-    )
+      </div>   
+    </>  
+      )
 };
 
 export default App;

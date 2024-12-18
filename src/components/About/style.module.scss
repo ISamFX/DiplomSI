@@ -1,5 +1,3 @@
-@import "../../device.scss";
-
 .container {
     position: absolute;
     left: 0px;
@@ -10,7 +8,7 @@
     z-index: 0;
   }
 .aboutFigure {
-  @include respond-to(mobile) {
+  @media (min-width: 375px) and (max-width: 1024px) {
     display: none;
   }
 }
@@ -30,7 +28,7 @@
 
   color: #FFFFFF;
 
-  @include respond-to(mobile) {
+  @media (min-width: 375px) and (max-width: 1024px) {
     font-size: 24px;
     margin-bottom: 20px;
     padding-top: 50px;
@@ -51,7 +49,7 @@
 
   color: #FFFFFF;
 
-  @include respond-to(mobile) {
+  @media (min-width: 375px) and (max-width: 1024px) {
     max-width: 100%;
     text-align: center;
     margin: 0 auto 20px auto;
@@ -82,7 +80,7 @@
   line-height: 20px;
 
   color: #FFFFFF;
-  @include respond-to(mobile) {
+  @media (min-width: 375px) and (max-width: 1024px) {
     text-align: center;
     padding-bottom: 50px;
   }

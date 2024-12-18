@@ -1,4 +1,4 @@
-@import "../../device.scss";
+
 
 .select_container{
     position: absolute;
@@ -127,7 +127,7 @@
     font-size: 24px;
     line-height: 24px;
     color: #444B58;
-    @include respond-to(mobile) {
+    @media (min-width: 375px) and (max-width: 1024px) {
         text-align: center;
     } 
 }
@@ -140,13 +140,13 @@
     margin-top: 20px;
     margin-bottom: 20px;
     padding-bottom: 20px;
-  @include respond-to(custom600) {
+    @media (min-width: 375px) and (max-width: 600px) {
     justify-content: center;
   }    
 }
 .sneaker_item{
     align-items: start;
-    @include respond-to(mobile) {
+    @media (min-width: 375px) and (max-width: 1024px) {
       align-items: center;
     }
 }
@@ -187,7 +187,7 @@
     gap: 20px;
     justify-content: space-between;
     margin-top: 40px;
-    @include respond-to(mobile) {
+    @media (min-width: 375px) and (max-width: 1024px) {
       flex-direction: row;
       flex-wrap: wrap;
       gap: 0px;
@@ -200,7 +200,7 @@
     gap: 70px;
     justify-content: space-between;
     margin-bottom: 22px;
-    @include respond-to(mobile) {
+    @media (min-width: 375px) and (max-width: 1024px) {
       flex-direction: row;
       flex-wrap: wrap;
       gap: 0px;
@@ -209,7 +209,7 @@
 .imgRect45{
     margin-bottom: 20px;
     padding-bottom: 20px;
-    @include respond-to(mobile) {
+    @media (min-width: 375px) and (max-width: 1024px) {
       width: 100%;
     }
 }
@@ -221,7 +221,7 @@
   padding-left: 20px;
   border: none;
   resize: none;
-  @include respond-to(mobile) {
+  @media (min-width: 375px) and (max-width: 1024px) {
     min-width: 305px;
     height: 265px;
     margin-left: 10px;
@@ -287,7 +287,7 @@
     line-height: 30px;
 
     color: #444B58;   
-    @include respond-to(mobile) {
+    @media (min-width: 375px) and (max-width: 1024px) {
       text-align: center;
     }  
 }
@@ -304,7 +304,7 @@
     font-size: 18px;
     line-height: 18px;
     color: #DBBBA9;
-  @include respond-to(mobile) {
+    @media (min-width: 375px) and (max-width: 1024px) {
     text-align: center;
   }
 }
@@ -325,7 +325,7 @@
     z-index: 2;
 
     background: #DBBBA9;
-  @include respond-to(mobile) {
+    @media (min-width: 375px) and (max-width: 1024px) {
     text-align: center;
     padding: 0;
   }
@@ -340,7 +340,7 @@
     color: white;
     margin-bottom: 10px;
 
-  @include respond-to(mobile) {
+    @media (min-width: 375px) and (max-width: 1024px) {
     text-align: center;
   }    
 }
@@ -352,7 +352,7 @@
     line-height: 25.2px;
     color: white;
     margin-bottom: 24px;
-    @include respond-to(mobile) {
+    @media (min-width: 375px) and (max-width: 1024px) {
       text-align: center;
     }  
 }
@@ -373,7 +373,7 @@
     margin-right: 20px;
     border-radius: 4px;
     border: none;
-    @include respond-to(mobile) {
+    @media (min-width: 375px) and (max-width: 1024px) {
       padding: 18px 130px 10px 10px;
     } 
 }
@@ -383,7 +383,7 @@
     margin-right: 20px;
     border-radius: 4px;
     border: none; 
-    @include respond-to(mobile) {
+    @media (min-width: 375px) and (max-width: 1024px) {
         padding: 18px 130px 10px 10px;
     } 
 }
@@ -422,17 +422,16 @@
 .error_messag_f4 {
     color:  #F14F4F;
 
-    text-align: start;
-    margin-left: 20px;
-    margin-top: 10px;
-    font-weight: 700;
+    text-align: end;
+    margin-left: 150px;
+    margin-top: -30px;
 }
 .f4_img {
 position: absolute;
   top: 60%;
   right: 5%;
   width: 150px;
-  @include respond-to(mobile) {
+  @media (min-width: 375px) and (max-width: 1024px) {
     display: none;
   }
 }

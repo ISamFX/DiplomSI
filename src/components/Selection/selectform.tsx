@@ -1,6 +1,7 @@
 import styled from "./style.module.scss"
 import { useState } from "react"
 import { useForm, FormProvider } from "react-hook-form"
+import {  toast } from 'sonner'
 import FormFirst from "./formfirst"
 import FormSecond from "./formsecond"
 import FormThird  from "./formthird"
@@ -15,6 +16,10 @@ type FormSelectData = {
 const Selection =() =>{
   const methods = useForm<FormSelectData>();
   const onSubmit = (data: FormSelectData) => {
+    toast.success ('Запрос отправлен', {
+      position: 'top-center',
+      duration: 3000,        
+      });
     console.log(data);    
     setTimeout(() => {
       methods.reset();

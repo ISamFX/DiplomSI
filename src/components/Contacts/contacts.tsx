@@ -4,11 +4,14 @@ import Instagram from "../../icons/Instagram.svg"
 import vk from "../../icons/VK.svg"
 import Question from "../../icons/question.png"
 import Ellipse11 from "../../img/Ellipse11.png"
-import MapYA from "../../img/Rectangle32.png"
 import Fon from "../../img/Rectangle42.png"
-import Exclude from "../../icons/Exclude.png"
-import ExcludeRed from "../../icons/ExcludeRed.png"
 import Tooltip from "../../img/Tooltip.png"
+import type {YMapLocationRequest} from '@yandex/ymaps3-types';
+
+export const LOCATION: YMapLocationRequest = {
+  center: [37.623082, 55.75254], // starting position [lng, lat]
+  zoom: 9 // starting zoom
+};
 
 const Contacts: React.FC = () => {
     const [isHovered, setIsHovered] = useState<boolean>(false);
@@ -36,12 +39,14 @@ const Contacts: React.FC = () => {
                 <p className={styled.text6}>г. Санкт-Петербург, Комсомольская, 43 к1</p>  
                 <img  src={vk} alt="VK" className={styled.iconVK}/> 
                 <img  src={Instagram} alt="Instagram" className={styled.iconInstagram}/>  
-                <img  src={MapYA} alt="Карта" className={styled.MapYA}/> 
-                <img  src={Exclude} alt="Точка 1" className={styled.Exclude1}/> 
-                <img  src={Exclude} alt="Точка 2" className={styled.Exclude2}/>  
-                <img  src={ExcludeRed} alt="Точка 3" className={styled.Exclude3}/>          
+                <div className={styled.MapYA}>
+                    <a href="https://yandex.ru/maps/?um=constructor%3A221f5f82c8512287e34ca4047f87417b935e9b5c40a892654d03c24352f957a8&source=constructorLink"
+                        className={styled.text7}>
+                        Санкт‑Петербург
+                    </a>
+                    <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A221f5f82c8512287e34ca4047f87417b935e9b5c40a892654d03c24352f957a8&amp;source=constructor" width="680" height="497" frameBorder="0"></iframe>            
+                </div>
             </div>
-
         </div>
     )
 }
